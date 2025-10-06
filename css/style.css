@@ -1582,6 +1582,11 @@ section {
 
 /* Tablets and Small Laptops (1024px and below) */
 @media (max-width: 1024px) {
+
+    .nav-toggle {
+        display: flex;
+    }
+
     .container {
         padding: 0 30px;
     }
@@ -1969,6 +1974,11 @@ section {
 
 /* Mobile Phones (480px and below) */
 @media (max-width: 480px) {
+
+    .nav-toggle {
+        display: flex;
+    }
+
     .container {
         padding: 0 20px;
     }
