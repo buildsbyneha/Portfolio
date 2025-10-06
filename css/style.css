@@ -451,197 +451,7 @@ body {
     color: white;
 }
 
-.glitch {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
 
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
-}
-
-.glitch::before {
-    color: #ff0080;
-    text-shadow: 2px 0 #ff0080;
-    animation: glitch-1 0.3s ease infinite;
-}
-
-.glitch::after {
-    color: #00ffff;
-    text-shadow: -2px 0 #00ffff;
-    animation: glitch-2 0.3s ease infinite;
-}
-
-.glitch:hover::before {
-    opacity: 0.8;
-    animation: glitch-1 0.3s ease infinite;
-}
-
-.glitch:hover::after {
-    opacity: 0.8;
-    animation: glitch-2 0.3s ease infinite;
-}
-
-.glitch:hover {
-    animation: glitch-skew 0.3s ease infinite;
-}
-
-@keyframes glitch-1 {
-    0% {
-        transform: translate(0);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    10% {
-        transform: translate(-2px, 1px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    20% {
-        transform: translate(2px, -1px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    30% {
-        transform: translate(-1px, 2px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    40% {
-        transform: translate(1px, -2px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    50% {
-        transform: translate(-2px, 1px);
-        clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-    }
-    60% {
-        transform: translate(2px, -1px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    70% {
-        transform: translate(-1px, 2px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    80% {
-        transform: translate(1px, -2px);
-        clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-    }
-    90% {
-        transform: translate(-2px, 1px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    100% {
-        transform: translate(0);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}
-
-@keyframes glitch-2 {
-    0% {
-        transform: translate(0);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    10% {
-        transform: translate(2px, -1px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    20% {
-        transform: translate(-2px, 1px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    30% {
-        transform: translate(1px, -2px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    40% {
-        transform: translate(-1px, 2px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    50% {
-        transform: translate(2px, -1px);
-        clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-    }
-    60% {
-        transform: translate(-2px, 1px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    70% {
-        transform: translate(1px, -2px);
-        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    80% {
-        transform: translate(-1px, 2px);
-        clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-    }
-    90% {
-        transform: translate(2px, -1px);
-        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    100% {
-        transform: translate(0);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}
-
-@keyframes glitch-skew {
-    0% {
-        transform: skew(0deg);
-    }
-    10% {
-        transform: skew(-1deg);
-    }
-    20% {
-        transform: skew(1deg);
-    }
-    30% {
-        transform: skew(-0.5deg);
-    }
-    40% {
-        transform: skew(0.5deg);
-    }
-    50% {
-        transform: skew(-1deg);
-    }
-    60% {
-        transform: skew(1deg);
-    }
-    70% {
-        transform: skew(-0.5deg);
-    }
-    80% {
-        transform: skew(0.5deg);
-    }
-    90% {
-        transform: skew(-1deg);
-    }
-    100% {
-        transform: skew(0deg);
-    }
-}
-
-/* Enhanced button hover effects */
-.btn-primary.glitch:hover {
-    background: linear-gradient(135deg, #ff0080, #00ffff);
-    color: white;
-    box-shadow: 
-        0 0 20px rgba(255, 0, 128, 0.4),
-        0 0 40px rgba(0, 255, 255, 0.3),
-        inset 0 0 20px rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
 .tech-stack {
     color: var(--text-light);
     padding: 12px 32px;
@@ -1011,7 +821,7 @@ section {
 .skills-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .skill-item {
@@ -1029,10 +839,6 @@ section {
     color: var(--text-dark);
 }
 
-.skill-percent {
-    color: var(--primary-color);
-    font-weight: 600;
-}
 
 .skill-bar {
     width: 100%;
@@ -1378,7 +1184,7 @@ section {
 
 /* Projects Page Styles */
 .projects-hero {
-    min-height: 60vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
     padding: 150px 0 80px;
@@ -1452,7 +1258,7 @@ section {
 
 .project-image {
     position: relative;
-    height: 200px;
+    height: 100px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     display: flex;
     align-items: center;
